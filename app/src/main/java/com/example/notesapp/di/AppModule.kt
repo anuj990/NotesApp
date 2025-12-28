@@ -6,6 +6,7 @@ import com.example.notesapp.feature_note.data.data_source.NoteDataBase
 import com.example.notesapp.feature_note.data.domain.repository.NoteRepository
 import com.example.notesapp.feature_note.data.domain.use_case.AddNotes
 import com.example.notesapp.feature_note.data.domain.use_case.DeleteNote
+import com.example.notesapp.feature_note.data.domain.use_case.GetNote
 import com.example.notesapp.feature_note.data.domain.use_case.GetNotesUseCase
 import com.example.notesapp.feature_note.data.domain.use_case.NoteUseCases
 import com.example.notesapp.feature_note.data.repository.NoteRepositoryImpl
@@ -42,6 +43,7 @@ object AppModule {
             getNotesUseCase = GetNotesUseCase(repository),
             deleteNote = DeleteNote(repository),
             addNote = AddNotes(repository),
+            getNote = GetNote(repository)
         )
     }
 }
